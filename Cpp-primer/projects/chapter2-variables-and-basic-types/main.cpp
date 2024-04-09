@@ -2,13 +2,15 @@
 
 int main()
 {
-    unsigned u = 10, u2 = 42;
-    std::cout << u2 - u << std::endl;
-    std::cout << u - u2 << std::endl;
-    int i = 10, i2 = 42;
-    std::cout << i2 - i << std::endl;
-    std::cout << i - i2 << std::endl;
-    std::cout << i - u << std::endl;
-    std::cout << u - i << std::endl;
+    int i = 0;
+    long long j = 0;
+    double k = 3.14L;
+    std::cout << "Hello world"
+              << ", I'm Dai" << std::endl;
+    int a{0}, b(0), c = {0};
+    extern int d;
+    int &refVal = a;
+    int *p = nullptr;
+    void *p1;
     return 0;
 }
