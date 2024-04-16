@@ -16,7 +16,7 @@ int main()
     while (cin >> v)
         svec.push_back(v);
 
-    for (auto s : svec)
+    for (string s : svec)
         cout << s << endl;
 
     return 0;

@@ -9,7 +9,7 @@ int main()
 {
     string s("Hello World!");
 
-    for (auto &c : s)
+    for (char &c : s)
         c = 'X';
 
     cout << s << endl;

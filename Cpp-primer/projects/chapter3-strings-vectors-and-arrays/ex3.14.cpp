@@ -14,7 +14,7 @@ int main()
     while (cin >> v)
         ivec.push_back(v);
 
-    for (auto i : ivec)
+    for (int i : ivec)
         cout << i << endl;
 
     return 0;

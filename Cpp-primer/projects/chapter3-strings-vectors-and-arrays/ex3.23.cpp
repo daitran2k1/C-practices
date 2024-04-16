@@ -20,7 +20,7 @@ int main()
     for (auto it = ivec.begin(); it != ivec.end(); ++it)
         *it *= 2;
 
-    for (auto i : ivec)
+    for (int i : ivec)
         cout << i << " ";
 
     return 0;

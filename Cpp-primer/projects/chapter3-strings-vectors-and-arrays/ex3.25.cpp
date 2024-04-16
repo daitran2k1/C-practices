@@ -16,7 +16,7 @@ int main()
         if (grade <= 100)
             ++*(beg + grade/10);
 
-    for (auto u : scores)
+    for (unsigned u : scores)
         cout << u << " ";
 
     return 0;

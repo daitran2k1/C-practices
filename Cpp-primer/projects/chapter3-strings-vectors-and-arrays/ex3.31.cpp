@@ -10,7 +10,7 @@ int main()
     for (int i = 0; i < 10; i++)
         arr[i] = i;
 
-    for (auto &v : arr)
+    for (int &v : arr)
         cout << v << endl;
 
     return 0;

@@ -11,7 +11,7 @@ int main()
     string s, result;
     cin >> s;
 
-    for (auto c : s)
+    for (char c : s)
         if (!ispunct(c))
             result += c;
 

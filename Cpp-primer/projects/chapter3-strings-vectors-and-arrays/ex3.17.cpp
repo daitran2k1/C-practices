@@ -16,12 +16,12 @@ int main()
     while (cin >> s)
         svec.push_back(s);
 
-    for (auto &s : svec)
+    for (string &s : svec)
         for (auto &c : s)
             c = toupper(c);
 
     int cnt = 0;
-    for (auto s : svec)
+    for (string s : svec)
     {
         cout << s << " ";
         ++cnt;

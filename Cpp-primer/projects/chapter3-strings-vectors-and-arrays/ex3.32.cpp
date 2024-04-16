@@ -27,10 +27,10 @@ int main()
 
     vector<int> b;
 
-    for (auto v : arr)
+    for (int v : arr)
         b.push_back(v);
 
-    for (auto &v : b)
+    for (int &v : b)
         cout << v << endl;
 
     return 0;
