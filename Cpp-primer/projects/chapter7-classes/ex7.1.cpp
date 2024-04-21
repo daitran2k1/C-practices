@@ -31,7 +31,7 @@ int main()
             }
         }
         std::cout << currData.bookNo << " " << total_units_sold << " " << total_revenue << " "
-                          << total_revenue / total_units_sold << std::endl;
+                  << total_revenue / total_units_sold << std::endl;
     }
     else
     {
