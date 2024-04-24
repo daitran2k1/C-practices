@@ -3,12 +3,23 @@
 
 using std::cin;
 using std::cout;
+using std::endl;
 using std::istream;
 using std::ostream;
 using std::string;
 
+struct Sales_data;
+
+istream &read(istream &is, Sales_data &data);
+
 struct Sales_data
 {
+    Sales_data(): bookNo(""), units_sold(0), revenue(0.0) {}
+    Sales_data(const string &s): bookNo(s) {}
+    Sales_data(const string &s, unsigned n, double p):
+               bookNo(s), units_sold(n), revenue(p*n) {}
+    Sales_data(istream &is) { read(is, *this); }
+
     string isbn() const { return bookNo; }
     Sales_data &combine(const Sales_data &);
     double avg_price() const;
@@ -60,5 +71,28 @@ ostream &print(ostream &os, const Sales_data &data)
 
 int main()
 {
+    Sales_data curData(cin);
+
+    if (cin)
+    {
+        do
+        {
+            Sales_data data(cin);
+            if (curData.bookNo == data.bookNo)
+                curData.combine(data);
+            else
+            {
+                print(cout, curData) << endl;
+                curData = data;
+            }
+        } while (cin);
+        print(cout, curData) << endl;
+    }
+    else
+    {
+        std::cerr << "No data?!" << endl;
+        return -1;
+    }
+    
     return 0;
 }

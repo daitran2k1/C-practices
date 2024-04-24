@@ -17,15 +17,8 @@ struct Person
         Person() = default;
         Person(const string &_name, const string &_address): name(_name), address(_address) {}
 
-        string getName() const
-        {
-            return name;
-        }
-
-        string getAddress() const
-        {
-            return address;
-        }
+        string getName() const { return name; }
+        string getAddress() const { return address; }
     
     private:
         string name, address;

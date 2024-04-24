@@ -8,17 +8,17 @@ using std::string;
 class Employee
 {
     public:
-        Employee(const string &fn, const string &ln, unsigned yoe, double s):
-            first_name(fn), last_name(ln), years_of_experience(yoe), salary(s) {}
-        Employee(): Employee("", "", 0, 0.0) {}
-        Employee(const string &fn, const string &ln): Employee(fn, ln, 0, 0.0) {}
-        Employee(const string &fn, const string &ln, unsigned yoe): Employee(fn, ln, yoe, 0.0) {}
+        Employee(const string &n, unsigned yoe, double s):
+            name(n), years_of_experience(yoe), salary(s) {}
+        Employee(): Employee("", 0, 0.0) {}
+        Employee(const string &n): Employee(n, 0, 0.0) {}
+        Employee(const string &n, unsigned yoe): Employee(n, yoe, 0.0) {}
 
 
     private:
-        string first_name, last_name;
-        unsigned years_of_experience = 0;
-        double salary = 0.0;
+        string name;
+        unsigned years_of_experience = 2;
+        double salary = 1600.0;
 };
 
 int main()

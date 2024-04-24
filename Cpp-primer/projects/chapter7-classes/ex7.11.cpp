@@ -14,18 +14,9 @@ struct Sales_data
     Sales_data(const string &s): bookNo(s) {}
     Sales_data(const string &s, unsigned n, double p):
                bookNo(s), units_sold(n), revenue(p*n) {}
-    Sales_data(istream &is)
-    {
-        double price;
-        is >> bookNo >> units_sold >> price;
-        revenue = units_sold * price;
-    };
+    Sales_data(istream &);
 
-    string isbn() const
-    {
-        return bookNo;
-    }
-
+    string isbn() const { return bookNo; }
     Sales_data &combine(const Sales_data &);
     double avg_price() const;
 
@@ -72,6 +63,11 @@ ostream &print(ostream &os, const Sales_data &data)
        << data.revenue << " " << data.avg_price();
 
     return os;
+}
+
+Sales_data::Sales_data(istream &is)
+{
+    read(is, *this);
 }
 
 int main()

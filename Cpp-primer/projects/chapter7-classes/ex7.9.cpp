@@ -12,15 +12,8 @@ struct Person
 {
     string name, address;
 
-    string getName() const
-    {
-        return name;
-    }
-
-    string getAddress() const
-    {
-        return address;
-    }
+    string getName() const { return name; }
+    string getAddress() const { return address; }
 };
 
 istream &read(istream &is, Person &p)
